@@ -1,0 +1,1 @@
+FROM nacyot/prolog-swi:apt

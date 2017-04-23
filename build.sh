@@ -1,4 +1,9 @@
 #!/bin/bash
-echo "Checkout a language branch first :)"
-echo "Available Languages: "
-git branch | grep -v master
+for f in */
+do
+    if [[ -d $f ]]; then
+        pushd $f
+        ./build.sh
+        popd
+    fi
+done
